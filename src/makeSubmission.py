@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from numpy import genfromtxt, savetxt
 
 def main():
-    # create teh training and test sets, skipping the header row with [1:]
+    # create the training and test sets, skipping the header row with [1:]
     dataset = genfromtxt(open('../Data/train.csv', 'r'), delimiter = ',', dtype = 'f8')[1:]
     target = [x[0] for x in dataset]
     train = [x[1:] for x in dataset]
